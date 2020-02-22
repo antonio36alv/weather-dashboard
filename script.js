@@ -94,21 +94,22 @@ function currentWeather(city) {
 
 function uviIndex(lat, lon) {
     let uviURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + key + "&lat=" + lat + "&lon=" + lon
-
+    let status = document.getElementById("status")
     $.ajax({
         url: uviURL,
         method: "GET"
     }).then(function (response) {
         var uviIndex = response.value
         if (uviIndex < 3) {
+
             currentWeatherDiv.style.backgroundColor = "green"
-            return "favorable"
+            status.textContent = "favorable"
         } else if (uviIndex >= 2 && uviIndex <= 5) {    
             currentWeatherDiv.style.backgroundColor = "yellow"
-            return "moderate"
+            status.textContent = "moderate"
         } else {
             currentWeatherDiv.style.backgroundColor = "red"
-            return "severe"
+            status.textContent = "severe"
         }
     })
     //when viewing the UV index there is some sort of color that indicates weather consditions (favorable moderate or severe)
