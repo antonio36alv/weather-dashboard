@@ -7,13 +7,57 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-    <label for="search">Search for a Location</label><input type="text" id="search"><button id="searchButton">Search!</button>
+    <div id="searchArea">
+        <label for="search">Search for a Location</label><input type="text" id="search"><button id="searchButton">Search!</button>
+    </div>
     <section id="currentWeather">
-
+        <div id="topRowCurrent"></div>
+        <!-- <div id=bottomRowCurrent> -->
+        <div>
+            <table>
+                <tbody id="currentTableBody">
+                    <tr>
+                        <td>Temp.</td>
+                        <td>Humidity</td>
+                        <td>Wind Speed</td>
+                    </tr>
+                    <tr id="fillerRow">
+                        <td><!-- populated via JS --></td>
+                        <td><!-- populated via JS --></td>
+                        <td><!-- populated via JS --></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
     <section id="forecastWeather">
-        Forecast
+        <div id="topRowForecast"></div>
+        <div>
+            <table>
+                <tbody id="forecastTableBbody">
+                    <tr id="fillerRowIcons">
+                        <!-- populated via JS -->
+                    </tr>
+                    <tr id="fillerRowDates">
+                        <!-- populated via JS -->
+                    </tr>
+                    <tr id="fillerRowTemperature">
+                        <!-- populated via JS -->
+                    </tr>
+                    <tr id="fillerRowHumidity">
+                        <!-- populated via JS -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section id="historyDiv">
+        <div>   
+            HISTORY
+        </div>
+        <div id="historyDivCollection">
+            <!-- populated via JS -->
+        </div>
     </section>
 <!--    GIVEN a weather dashboard with form inputs
         WHEN I view the UV index

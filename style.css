@@ -1,4 +1,62 @@
 *  {
     padding: 0;
     margin: 0;
+    width: 100%;
+    text-align: center;
+    background-color: lightgray;
+}
+
+#currentWeather {
+    margin-top: 14px;
+    width: 20%;
+    border: black dotted thick;
+}
+
+#topRowCurrent {
+    display: flex;
+    flex-direction: column;
+}
+
+#topRowCurrent img { 
+    height: 1%;
+    max-width: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#forecastWeather{
+    margin-top: 14px;
+    width: 40%;
+    color: blue;
+    border: black dotted thick;
+    background-color: lightblue;
+    margin: 0px, auto;
+}
+
+
+td { 
+    width: 175px;
+    padding: 5px;
+    border-style: solid;
+}
+
+#historyDiv {
+    margin-top: 14px;
+    border: black dotted thick;
+    width: 40%;
+}
+#searchArea {
+    width: 20%;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 780px) {
+    #historyDiv, #currentWeather, #forecastWeather {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 98%;
+    }
 }
